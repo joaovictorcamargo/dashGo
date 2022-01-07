@@ -10,10 +10,11 @@ export function Header() {
       <Flex
       as="header"
       w="100%"
-      maxWidth={1480}
+      
       h="20"
       mx="auto"
       align="center"
+      backgroundColor="rgba(248, 242, 243, 1)"
       px="6"
       >
       
@@ -34,15 +35,17 @@ export function Header() {
                <Icon as={AiOutlineShoppingCart}  fontSize="24" ml="3"/>
 
            </Flex>
+           
       </Flex>
-      <Flex
+
+        <Flex
            
            as="label"
            flex="1"
-           py="4"
+           py="2"
            px="8"
-           ml="6"
-           maxWidth={450}
+           ml="6" 
+           w={450}
            alignSelf="center"
            color="gray.200"
            position="relative"
@@ -60,6 +63,7 @@ export function Header() {
              
             <Icon as={RiSearchLine} fontSize="20"/>
            </Flex>
+  
 
       </>
     );
