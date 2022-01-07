@@ -1,6 +1,8 @@
-import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Flex, SimpleGrid, Text, Image } from "@chakra-ui/react";
+
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
+
 
 export default function Dashboard() {
     return (
@@ -23,35 +25,66 @@ export default function Dashboard() {
             align="flex-start"
             >
                 <Box
-                p="14"
+                display="flex"
                 bg="gray.800"
                 borderRadius={8}
                 h="190"
                 //pb="4"
                 >
-                    <Text fontSize="lg" mb="4">Frigobar</Text>
+                  
+                    <Image
+                      pt="2"
+                      pl="1"
+                      
+                       boxSize='60px'
+                       objectFit='cover'
+                       src="https://www.webcontinental.com.br/file/general/best-price-tag.svg"
+                       alt="Frigobar"
+                    />
+                   
+                    <Box
+                    mt="5"
+                    
+                    >
+                    <Image
+                    boxSize='140px'
+                    objectFit='cover'
+                    src="https://www.webcontinental.com.br/ccstore/v1/images/?source=/file/v3484140081265363126/products/bra08bga-frigobar-brastemp-vermelho-marsala-retro-1000.jpg"
+                    alt="Frigobar"
+                    />
+                    </Box>
 
                 </Box>
 
                 <Box
-                p="14"
+                display="flex"
                 bg="gray.800"
                 borderRadius={8}
                 h="190"
                 //pb="4"
                 >
-                    <Text fontSize="lg" mb="4">Frigobar</Text>
-
-                </Box>
-
-                <Box
-                p="14"
-                bg="gray.800"
-                borderRadius={8}
-                h="190"
-                //pb="4"
-                >
-                    <Text fontSize="lg" mb="4">Frigobar</Text>
+                  
+                    <Image
+                      pt="2"
+                      pl="1"
+                      
+                       boxSize='60px'
+                       objectFit='cover'
+                       src="https://www.webcontinental.com.br/file/general/best-price-tag.svg"
+                       alt="Frigobar"
+                    />
+                   
+                    <Box
+                    mt="5"
+                    
+                    >
+                    <Image
+                    boxSize='140px'
+                    objectFit='cover'
+                    src="https://www.webcontinental.com.br/ccstore/v1/images/?source=/file/v3484140081265363126/products/bra08bga-frigobar-brastemp-vermelho-marsala-retro-1000.jpg"
+                    alt="Frigobar"
+                    />
+                    </Box>
 
                 </Box>
                 <Box
