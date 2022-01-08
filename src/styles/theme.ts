@@ -4,12 +4,12 @@ export const theme = extendTheme({
     colors: {
        gray: {
            "900": "#eff3f7",
-           "800": "rgba(255, 255, 255, 1)",
+           "800": "#FFF",
            "700": "#0098ff",
            "600": "#0098ff",
-           "500": "#0098ff",
+           "500": "#000",
            "400": "#797D9A",
-           "300": "#0098ff",
+           "300": "#000",
            "200": "#B3B5C6",
            "100": "#0098ff",
            "50": "rgba(11, 40, 110, 1)",
@@ -22,7 +22,7 @@ export const theme = extendTheme({
     styles: {
         global: {
             body: {
-                bg: 'rgba(239, 243, 247, 1)',
+                bg: 'gray.900',
                 color: 'gray.50'
             }
         }

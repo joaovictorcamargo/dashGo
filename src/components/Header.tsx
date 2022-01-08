@@ -1,68 +1,142 @@
-import { Flex, Icon, Input, Text, Image} from '@chakra-ui/react';
-import {RiSearchLine} from 'react-icons/ri';
+import { Flex, Icon, Input, Text, Image, Heading, Box, Divider, Button, HStack, ButtonGroup, IconButton} from '@chakra-ui/react';
+import {RiArrowUpDownLine, RiEqualizerLine, RiSearchLine} from 'react-icons/ri';
 import {AiOutlineUser} from 'react-icons/ai';
 import {AiOutlineShoppingCart} from 'react-icons/ai';
 import {AiOutlineMenu} from 'react-icons/ai'
+
+import { Search } from './Header/Search';
+
 
 export function Header() {
     return (
         <>
       <Flex
-      as="header"
       w="100%"
       
-      h="20"
+      maxWidth={1480}
       mx="auto"
-      align="center"
-      backgroundColor="rgba(248, 242, 243, 1)"
-      px="6"
       >
-      
-           <Icon as={AiOutlineMenu}  fontSize="24"/>
-           <Image
-            boxSize='150px'
-            ml="3"
-            src='https://www.webcontinental.com.br/file/general/webcontinental-logo.svg'
-            alt='Dan Abramov'
-            />
-          
-          
+          <Box
+           flex="1"
+              
+           bg="
+           rgba(248, 242, 243, 1)"
+           p="3"
+          >
+              <Flex
+              justify="space-between"
+              align="center"
+              >
+                  <Box>
+            <Icon as={AiOutlineMenu}  fontSize="24"/>
+           <Icon as={AiOutlineMenu} fontSize="24"/>
+            </Box>
+
            <Flex
-           align="center"
-           ml="auto"
+           
            >
                <Icon as={AiOutlineUser}  fontSize="24"/>
                <Icon as={AiOutlineShoppingCart}  fontSize="24" ml="3"/>
 
            </Flex>
+           </Flex>
+
+           <Search/>
            
+
+             
+          </Box>
+      
+          
+          
+          
+          
       </Flex>
 
-        <Flex
-           
-           as="label"
-           flex="1"
-           py="2"
-           px="8"
-           ml="6" 
-           w={450}
-           alignSelf="center"
-           color="gray.200"
-           position="relative"
-           bg="gray.800"
-           borderRadius="full"
-           >
-             <Input
-             color="gray.50"
-             variant="unstyled"
-             
-             mr="4"
-             placeholder='Iphone 12 Capa'
-             _placeholder={{ color: 'gray.400'}}
-             />
-             
-            <Icon as={RiSearchLine} fontSize="20"/>
-           </Flex>
+      
+
+           <Heading 
+            mt="5" 
+            mb="5" 
+            ml="5"   
+            color="gray.400"  
+            size="md"
+            fontWeight="normal">Resultado da Busca</Heading>
+
+           <Divider 
+           ml="5"
+           />
+
+                  <Flex
+                  
+                  justify="space-between"
+                  align="center"
+                  ml="6"
+                  mr="4"
+                  mt="5"
+                  >
+                      <Heading
+                      size="sm"
+                      fontWeight="normal">452 Resultados</Heading>
+
+                      <Box>
+                      <HStack
+                      spacing="4"
+                      >
+                          
+                      <Button
+                      as="a"
+                      h="8"
+                      w="38"
+                      size="sm"
+                      fontSize="sm"
+                      variant='outline'
+                      colorScheme="gray.400"
+                      leftIcon={<Icon as={RiEqualizerLine} fontSize="21"/>}
+                      
+                      transition='all 0.2s cubic-bezier(.08,.52,.52,1)'
+                      _hover={{ bg: '#ebedf0' }}
+                      _active={{
+                        bg: '#dddfe2',
+                        transform: 'scale(0.98)',
+                        borderColor: '#bec3c9',
+                      }}
+                      _focus={{
+                        boxShadow:
+                          '0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)',
+                      }}
+                      >
+                        Filtrar
+                      </Button>
+
+                      <Button
+                      as="a"
+                      ml="3"
+                      h="8"
+                      w="38"
+                      size="sm"
+                      fontSize="sm"
+                      variant='outline'
+                      colorScheme="#666666"
+                      leftIcon={<Icon as={RiArrowUpDownLine} fontSize="21"/>}
+                      _hover={{ bg: '#ebedf0' }}
+                      _active={{
+                        bg: '#dddfe2',
+                        transform: 'scale(0.98)',
+                        borderColor: '#bec3c9',
+                      }}
+                      _focus={{
+                        boxShadow:
+                          '0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)',
+                      }}
+                      >
+                        Ordenar por
+                      </Button>
+                      </HStack>
+
+                      </Box>
+
+                  </Flex>
   
 
       </>
